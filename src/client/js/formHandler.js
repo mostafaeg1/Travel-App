@@ -1,18 +1,18 @@
 // Generate Button
-console.log("leeesh");
+
 const handleSubmit = document.querySelector('.generate-button');
 
-Client.handleSubmit.addEventListener('click', () => {
+handleSubmit.addEventListener('click', () => {
 
     event.preventDefault();
 
-console.log("leeesh");
+
     // Form Input Variables
 
-    let departDateInput = Client.document.querySelector('#depart-date-input').value;
-    let returnDateInput = Client.document.querySelector('#return-date-input').value;
-    let destinationInput = Client.document.querySelector('#destination-input').value;
-    let remarksInput = Client.document.querySelector('#remarks-input').value;
+    let departDateInput = document.querySelector('#depart-date-input').value;
+    let returnDateInput = document.querySelector('#return-date-input').value;
+    let destinationInput = document.querySelector('#destination-input').value;
+    let remarksInput = document.querySelector('#remarks-input').value;
 
 
     // Day Difference Variarbles
@@ -39,7 +39,7 @@ console.log("leeesh");
 
     // Post Basic Validations - Processing Message
 
-    const processMsg = Client.document.querySelector('.process-message');
+    const processMsg = document.querySelector('.process-message');
     processMsg.innerHTML = 'processing...';
 
 
@@ -79,8 +79,8 @@ console.log("leeesh");
 
             // Output/Close/Print Button Pop Up + Processing Message Wiper
 
-            const outputOuter = Client.document.querySelector('.print-area');
-            const closeButton = Client.document.querySelector('.buttons');
+            const outputOuter = document.querySelector('.print-area');
+            const closeButton = document.querySelector('.buttons');
 
             outputOuter.style.display = 'block';
             closeButton.style.display = 'flex';
@@ -101,36 +101,36 @@ console.log("leeesh");
 
 
             // Destination Name
-            Client.document.querySelector('#destination-name').innerHTML = `${data.geonamesData.geonames[0].toponymName}`;
+            document.querySelector('#destination-name').innerHTML = `${data.geonamesData.geonames[0].toponymName}`;
 
             // Country Name
-            Client.document.querySelector('#country-name').innerHTML = `${data.geonamesData.geonames[0].countryName}`;
+            document.querySelector('#country-name').innerHTML = `${data.geonamesData.geonames[0].countryName}`;
 
             // Country Code
-            Client.document.querySelector('#country-code').innerHTML = `${data.geonamesData.geonames[0].countryCode}`;
+            document.querySelector('#country-code').innerHTML = `${data.geonamesData.geonames[0].countryCode}`;
 
             // Time Zone
-            Client.document.querySelector('#time-zone').innerHTML = `${data.weatherbitData.timezone}`;
+            document.querySelector('#time-zone').innerHTML = `${data.weatherbitData.timezone}`;
 
             // Population
-            Client.document.querySelector('#population').innerHTML = `${data.geonamesData.geonames[0].population}`;
+            document.querySelector('#population').innerHTML = `${data.geonamesData.geonames[0].population}`;
 
             // Destination Description
-            Client.document.querySelector('#destination-description').innerHTML = `${data.geonamesData.geonames[0].fcodeName}`;
+            document.querySelector('#destination-description').innerHTML = `${data.geonamesData.geonames[0].fcodeName}`;
 
             // Number of Trip Day
-            Client.Client.document.querySelector('.trip-day').innerHTML = `<div id="counter">${tripDay}</div><div id="counter-text">day trip</div>`;
+            document.querySelector('.trip-day').innerHTML = `<div id="counter">${tripDay}</div><div id="counter-text">day trip</div>`;
 
             // Departure Date
-            Client.document.querySelector('#depart-date').innerHTML = `${departDateInput}`;
+            document.querySelector('#depart-date').innerHTML = `${departDateInput}`;
 
             // Return Date
-            Client.document.querySelector('#return-date').innerHTML = `${returnDateInput}`;
+            document.querySelector('#return-date').innerHTML = `${returnDateInput}`;
 
 
             // Weather Info Card
 
-            const weatherWrapper = Client.document.querySelector('.weather-wrapper');
+            const weatherWrapper = document.querySelector('.weather-wrapper');
             weatherWrapper.innerHTML = '';
 
             if (dayDiff > 15) {
@@ -141,7 +141,7 @@ console.log("leeesh");
 
                 for (let i = dayDiff; i < data.weatherbitData.data.length - 1; i++) {
 
-                const weatherCard = Client.document.createElement('div');
+                const weatherCard = document.createElement('div');
                 weatherCard.className = "weather-card";
 
                 weatherCard.insertAdjacentHTML('afterbegin', `
@@ -162,9 +162,9 @@ console.log("leeesh");
             // Remarks
 
             if (remarksInput.length === 0) {
-                Client.document.querySelector('#remarks').innerHTML = 'You have no travel remarks.';
+                document.querySelector('#remarks').innerHTML = 'You have no travel remarks.';
             } else {
-                Client.document.querySelector('#remarks').innerHTML = `${remarksInput}`;
+                document.querySelector('#remarks').innerHTML = `${remarksInput}`;
             }
 
 

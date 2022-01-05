@@ -1,4 +1,3 @@
-console.log("leeesh");
 import { handleSubmit } from './js/formHandler';
 import { currentDate } from './js/currentDate';
 import { minDate } from './js/minDate';

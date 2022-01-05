@@ -3,18 +3,18 @@
 export function printButton() {
 
     // Print Area
-    const formOutput = Client.document.querySelector('.print-area').innerHTML;
+    const formOutput = document.querySelector('.print-area').innerHTML;
 
     // Original Window Body
-    const originalWindowBody =  Client.document.body.innerHTML;
+    const originalWindowBody = document.body.innerHTML;
 
     // Execute Original Window Body = Print Area
-    Client.document.body.innerHTML = formOutput;
+    document.body.innerHTML = formOutput;
 
     // Print Function
     window.print();
 
     // Return to Original Window Body
-    Client.document.body.innerHTML = originalWindowBody;
+    document.body.innerHTML = originalWindowBody;
 
 }
