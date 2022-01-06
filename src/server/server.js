@@ -2,7 +2,6 @@
 // const fetch = require('node-fetch');
 // import { fetch } from 'node-fetch';
 
-console.log("leeesh");
 // Main Server Packages
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -47,7 +46,6 @@ app.get('/test', function (req, res) {
 
 // APIs
 app.post('/all-apis', (req, res) => {
-  console.log("asdf");
 // User Inp ut Variable
     let appInputData = {
         input: req.body

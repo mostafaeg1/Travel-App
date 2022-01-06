@@ -23,7 +23,15 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
-            }
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+              },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+              },
         ]
     },
     plugins: [
@@ -32,11 +40,6 @@ module.exports = {
             filename: "./index.html",
         }),
         new MiniCssExtractPlugin({filename: '[name].css'}),
-        new WorkboxPlugin.GenerateSW(),
-        new CopyPlugin({
-            patterns: [
-                { from: './src/client/img', to: './img' }
-            ],
-          }),
+        new WorkboxPlugin.GenerateSW()
     ]
 }
