@@ -74,7 +74,6 @@ handleSubmit.addEventListener('click', () => {
 
             // All API Data Log
 
-            console.log(data);
 
 
             // Output/Close/Print Button Pop Up + Processing Message Wiper

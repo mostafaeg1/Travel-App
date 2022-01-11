@@ -47,6 +47,7 @@ app.get('/test', function (req, res) {
 // APIs
 app.post('/all-apis', (req, res) => {
 // User Inp ut Variable
+console.log("ssssssssssssss");
     let appInputData = {
         input: req.body
     };

@@ -5,7 +5,6 @@ import { dayDiffCheck } from './js/dayDiffChecker';
 import { printButton } from './js/printButton';
 import { closeButton } from './js/closeButton';
 
-console.log("ss");
 
 import './styles/styles.scss'
 export {
