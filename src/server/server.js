@@ -56,7 +56,7 @@ console.log("ssssssssssssss");
     console.log(`user destination input: ${req.body.destinationInput}`);
 
     // Geonames API Variable
-    const geonamesAPI = (`http://api.geonames.org/searchJSON?name=${req.body.destinationInput}&maxRows=1&username=${process.env.GEONAMES_USER}`);
+    const geonamesAPI = (`http://api.geonames.org/searchJSON?name=${req.body.destinationInput}&maxRows=1&username=mostafa_egbarea147`);
 
     // Get Geonames Data
     fetch (geonamesAPI)
@@ -70,7 +70,7 @@ console.log("ssssssssssssss");
         }
 
         // Weatherbit API Variable
-        const weatherbitAPI = `https://api.weatherbit.io/v2.0/forecast/daily?&lat=${geonamesData.geonames[0].lat}&lon=${geonamesData.geonames[0].lng}&key=${process.env.WEATHERBIT_KEY}`;
+        const weatherbitAPI = `https://api.weatherbit.io/v2.0/forecast/daily?&lat=${geonamesData.geonames[0].lat}&lon=${geonamesData.geonames[0].lng}&key=7fdd9f3a99f74f68ab8881f7796ac84f`;
 
         // Get Weatherbit Data
         fetch (weatherbitAPI)
@@ -78,7 +78,7 @@ console.log("ssssssssssssss");
         .then (weatherbitData => {
 
             // Pixabay Dynamic Data API Variable
-            const pixabayAPI = `https://pixabay.com/api/?key=${process.env.PIXABAY_KEY}&q=${req.body.destinationInput}&image_type=photo&editors_choice=true&per_page=3`;
+            const pixabayAPI = `https://pixabay.com/api/?key=25097269-5f7653113c567f5faad2e6cc4&q=${req.body.destinationInput}&image_type=photo&editors_choice=true&per_page=3`;
 
             // Get Pixabay Dynamic Data
             fetch (pixabayAPI)
@@ -86,7 +86,7 @@ console.log("ssssssssssssss");
             .then (pixabayData => {
 
                 // Pixabay Default Data API Variable
-                const pixabayDefaultAPI = `https://pixabay.com/api/?key=${process.env.PIXABAY_KEY}&q=travel&image_type=photo&editors_choice=true&per_page=3`;
+                const pixabayDefaultAPI = `https://pixabay.com/api/?key=25097269-5f7653113c567f5faad2e6cc4&q=travel&image_type=photo&editors_choice=true&per_page=3`;
 
                 // Get Pixabay Default Data
                 fetch (pixabayDefaultAPI)
